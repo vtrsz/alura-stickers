@@ -1,18 +1,9 @@
-## Getting Started
+## Introdução
+Olá, meu nome é Vitor Souza e estou participando da imersão java da Alura.
+neste repositório estará todo conteúdo colocado em prática por mim nesta imersão.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Onde encontrar o código?
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Bem vindo, você pode encontrar o código das aulas nas branchs
+`aula1` Conteúdo da aula 1.
+`aula2` Conteúdo da aula 2.
