@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 
 public class GeradorDeFigurinhas {
 
-    public void cria(InputStream inputStream, String nomeArquivo, String textoImagem) throws Exception {
+    public void cria(InputStream inputStream, String nomeArquivo) throws Exception {
 
         // leitura da imagem
         // InputStream inputStream = 
@@ -41,6 +41,7 @@ public class GeradorDeFigurinhas {
         Color fillColor = Color.yellow;
 
         // pegar o tamanho da fonte
+        String textoImagem = "TOPZERA";
         AffineTransform affinetransform = new AffineTransform();     
         FontRenderContext frc = new FontRenderContext(affinetransform,true,true);     
         int textoLargura = (int)(fontImpact.getStringBounds(textoImagem, frc).getWidth());
