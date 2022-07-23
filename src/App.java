@@ -28,7 +28,7 @@ public class App {
         for (Map<String, String> filme : listaDeFilmes) {
 
             String nomeFilme = filme.get("title");
-            String urlImagem = filme.get("image");
+            String urlImagem = filme.get("image").replaceAll("(@+)(.*).jpg$", "$1.jpg");
             String ratingImdb = filme.get("imDbRating");
             double numRatingImdb = Double.parseDouble(ratingImdb);
 
