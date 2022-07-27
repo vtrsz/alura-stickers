@@ -7,7 +7,7 @@ import java.util.Map;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        API minhaAPI = API.MEME;
+        API minhaAPI = API.LINGUAGENS;
 
         var http = new ClientHttp();
         String json = http.buscaDados(minhaAPI.url());
@@ -34,7 +34,6 @@ public class App {
             String nomeArquivo = "saida/" + titulo.replace(":", "-")  + ".png";
 
             try{
-                
                 InputStream inputStream = new URL(urlImagem).openStream();
                 System.out.println("Gerando imagem - [" + titulo + "]");
                 geradorDeFigurinhas.cria(inputStream, nomeArquivo);

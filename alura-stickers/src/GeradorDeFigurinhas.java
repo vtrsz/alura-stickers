@@ -11,13 +11,7 @@ import javax.imageio.ImageIO;
 public class GeradorDeFigurinhas {
 
     public void cria(InputStream inputStream, String nomeArquivo) throws Exception {
-
         // leitura da imagem
-        // InputStream inputStream = 
-        //             new FileInputStream(new File("entrada/filme-maior.jpg"));
-        // InputStream inputStream = 
-        //                 new URL("https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg")
-        //                 .openStream();
         BufferedImage imagemOriginal = ImageIO.read(inputStream);
 
         // cria nova imagem em memória com transparência e com tamanho novo
@@ -31,8 +25,7 @@ public class GeradorDeFigurinhas {
         Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
-
-        // configurar a fonte        
+        // configurar a fonte
         var fontSize = 64;
         var fontImpact = Font.createFont(Font.TRUETYPE_FONT, new File("fonts/impact.ttf")).deriveFont(Font.LAYOUT_LEFT_TO_RIGHT, fontSize);
         //var fonte = new Font(fontImpact, Font.BOLD, 64);
@@ -47,7 +40,6 @@ public class GeradorDeFigurinhas {
         int textoLargura = (int)(fontImpact.getStringBounds(textoImagem, frc).getWidth());
         int textoAltura = (int)(fontImpact.getStringBounds(textoImagem, frc).getHeight());
 
-    
         // escrever uma frase na nova imagem
         var CentroLargura = (largura/2) - (textoLargura/2); 
         var CentroAltura = novaAltura  - textoAltura;
@@ -61,8 +53,6 @@ public class GeradorDeFigurinhas {
         graphics.setColor(fillColor);
         graphics.drawString(textoImagem, CentroLargura, CentroAltura);
 
-        
-        
         // escrever a nova imagem em um arquivo
         File directory = new File("saida/");
         if (!directory.exists()){
